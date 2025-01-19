@@ -1,0 +1,305 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@font-face {
+  font-family: 'GNU Unifont';
+  src: url('/assets/fonts/unifont-15.1.05.otf') format('opentype'); 
+}
+
+@font-face {
+  font-family: 'Perfect DOS VGA 437';
+  src: url('/assets/fonts/Perfect DOS VGA 437.ttf') format('truetype'); /* Adjust the path as needed */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+// Override Minima variables
+$base-font-family: 'GNU Unifont', monospace;
+$heading-font-family: 'GNU Unifont', monospace;
+$content-width: 1000px !default;
+
+// Import Minima styles
+@import "minima";
+
+// Custom background color
+body {
+  font-family: $base-font-family;
+  color: #1D1E20; /* Black color for text */
+}
+
+// Custom background color for posts
+body.post-page {
+  background-color: #233a5c; /* Windows 95 desktop teal color */
+}
+
+// Custom background color for home page
+body.home-page {
+  background-color: #233a5c; /* Windows 95 desktop teal color */
+}
+
+.main-content {
+  max-width: $content-width;
+  margin: 0 auto; // Changed from 1rem auto to 0 auto
+  padding: 1rem;
+  background-color: #C5C9C7;
+  box-shadow: 5px 5px 0 #666666;
+  border-radius: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+// Custom styles for the post meta
+.post-meta {
+  color: black;
+  margin-top: 0.1rem; /* Reduced space between title and date */
+  font-size: 0.875rem; /* Smaller font size for date */
+}
+
+// Custom styles for home page links
+.home-content a {
+  color: black;
+}
+
+// Adjusting header colors and sizes with more specificity
+body.post-page h1, body.home-page h1,
+body.post-page h2, body.home-page h2,
+body.post-page h3, body.home-page h3,
+body.post-page h4, body.home-page h4,
+body.post-page h5, body.home-page h5,
+body.post-page h6, body.home-page h6, 
+.post-title {
+  font-family: 'GNU Unifont', monospace;
+  color: #1D1E20; /* Black color for headings */
+}
+
+body.post-page h1, body.home-page h1 {
+  font-size: 1.2rem; /* Adjust as needed */
+}
+
+body.post-page h2, body.home-page h2 {
+  font-size: 1.1rem; /* Adjust as needed */
+}
+
+body.post-page h3, body.home-page h3 {
+  font-size: 1rem; /* Adjust as needed */
+}
+
+body.post-page h4, body.home-page h4 {
+  font-size: 0.9rem; /* Adjust as needed */
+}
+
+body.post-page h5, body.home-page h5 {
+  font-size: 0.8rem; /* Adjust as needed */
+}
+
+body.post-page h6, body.home-page h6 {
+  font-size: 0.7rem; /* Adjust as needed */
+}
+
+body.post-page h1, body.post-page h2,
+body.post-page h3, body.post-page h4,
+body.post-page h5, body.post-page h6 {
+  text-decoration: underline;
+}
+
+// Apply Perfect DOS VGA 437 font to home page article titles
+.home-content .post-link {
+  font-family: 'Perfect DOS VGA 437', sans-serif;
+}
+
+.site-header {
+  background-color: #152337;
+  padding: 1rem 0;
+  border-bottom: 2px solid #666666;
+  display: flex;
+  justify-content: center; // Changed from space-between to center
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center; // Changed from space-between to center
+  align-items: center;
+  width: 100%;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.social-links {
+  position: absolute;
+  left: 1rem; /* Position the social links to the far left */
+  display: flex;
+  align-items: center;
+}
+
+.social-links a {
+  color: white; /* Color for social icons */
+  margin-right: 1rem; /* Spacing between icons */
+  text-decoration: none;
+}
+
+// Custom footer styles
+.site-footer {
+  background-color: #152337; /* Dark grey background for footer */
+  padding: 3rem 0; /* Add padding for spacing */
+  border-top: 2px solid #666666; /* Border at the top */
+}
+
+.site-title {
+  font-family: $heading-font-family;
+  color: #F0F0F0 !important; /* Lighter color for title */
+  font-size: 2rem; /* Increase font size */
+  text-align: center; /* Center align title */
+  display: block;
+}
+
+// Custom styles for syntax highlighting
+.highlight pre, .highlight code {
+  font-family: 'JetBrains Mono', Consolas, 'Courier New', monospace;
+  font-size: .95em; /* Ensure the font size for code blocks is consistent */
+}
+
+// Custom styles for inline code
+p code, li code, span code {
+  font-size: .875em; /* Smaller font size for inline code */
+  font-family: 'JetBrains Mono', Consolas, 'Courier New', monospace;
+}
+
+.doc-icon {
+  width: 24px; /* Adjust size as needed */
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  margin-right: 0.5rem; /* Space between icon and post details */
+  vertical-align: middle; /* Align icon vertically with the text */
+}
+
+.post-item {
+  margin-bottom: 1rem; /* Space between post items */
+}
+
+.post-details {
+  display: flex;
+  align-items: center;
+}
+
+.post-details .post-link {
+  margin-left: 0.5rem; /* Space between icon and title */
+  font-size: 1rem; /* Adjust font size for titles */
+  color: white; /* White color for titles */
+}
+
+.post-list .post-meta {
+  margin-left: 0.5rem; /* Reduced space between title and date */
+  font-size: 0.875rem; /* Smaller font size for date */
+  color: white;
+}
+
+// Specific adjustments for post layout
+.post {
+  .post-header, .post-content {
+    padding: 0 1rem;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; // Slightly smaller base font size for mobile
+  }
+
+  .site-header {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 0;
+  }
+
+  .social-links {
+    position: static;
+    margin-bottom: 1rem;
+  }
+
+  .site-title {
+    font-size: 1.5rem; /* Smaller font size for title */
+    width: 100%;
+    text-align: center;
+  }
+
+  .wrapper {
+    padding: 0;
+  }
+
+  .doc-icon {
+    width: 24px; /* Ensure consistent size on mobile */
+    height: 24px; /* Ensure consistent height */
+  }
+
+  .post-details {
+    display: flex;
+    align-items: center;
+  }
+
+  .post-item {
+    margin-bottom: 1rem; /* Adjust spacing between post items on mobile */
+  }
+
+  .main-content {
+    margin: 0;
+    padding: 0.5rem;
+    width: calc(100% - 1rem);
+    box-shadow: 3px 3px 0 #666666;
+  }
+
+  .post {
+    .post-header, .post-content {
+      padding: 0 0.5rem;
+    }
+  }
+
+  // Ensure text doesn't overflow
+  p, h1, h2, h3, h4, h5, h6 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .post-title {
+    font-size: 1.5rem; // Smaller post title for mobile
+  }
+
+  .post-content {
+    h2 {
+      font-size: 1.25rem;
+    }
+    h3 {
+      font-size: 1.1rem;
+    }
+    h4 {
+      font-size: 1rem;
+    }
+  }
+}
+
+// Additional adjustments for very small screens
+@media (max-width: 480px) {
+  .main-content {
+    width: calc(100% - 1rem);
+    margin: 0.5rem auto;
+    padding: 0.5rem;
+  }
+
+  .post-title {
+    font-size: 1.3rem;
+  }
+
+  .post-content {
+    h2 {
+      font-size: 1.2rem;
+    }
+    h3 {
+      font-size: 1.1rem;
+    }
+    h4 {
+      font-size: 1rem;
+    }
+  }
+}
